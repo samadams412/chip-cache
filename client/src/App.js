@@ -9,6 +9,7 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { StoreProvider } from "./utils/GlobalState";
 import Home from "./pages/Home";
+import Products from "./pages/Products"
 import Detail from './pages/Detail';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -48,6 +49,7 @@ function App() {
          <Nav/>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Products" element={<Products />} />
             <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route 
@@ -64,7 +66,7 @@ function App() {
                 element={<Success />} 
               />
           </Routes>
-          
+          <Footer/>
         </StoreProvider>
       </div>
       </body>

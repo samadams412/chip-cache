@@ -18,6 +18,7 @@ function Nav() {
           </button>
           <div className='gamer-font collapse navbar-collapse'
           id="navbarNavAltMarkup">
+            <a className="nav-link" href="/OrderHistory">Products</a>
             <a className="nav-link" href="/OrderHistory">Order History</a>
             <a className="nav-link" href="/" onClick={() => Auth.logout()}>Logout</a>
            
@@ -36,7 +37,7 @@ function Nav() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse gamer-font" id="navbarNavAltMarkup">
-            <a className="nav-link gamer-font" href="/OrderHistory">Order History</a>
+          <a className="nav-link" href="/Products">Products</a>
             <a className="nav-link" href="/Login">Login</a>
             <a className="nav-link" href="/Signup">Signup</a>
           </div>

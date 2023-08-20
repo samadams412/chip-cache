@@ -68,7 +68,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-          Cart
+          <i className="uil uil-shopping-cart"></i>
       </div>
     );
   }

@@ -1,0 +1,50 @@
+:root {
+    --color1: #353535;
+    --color2: #3c6e71;
+    --color3: #ffffff;
+    --color4: #d9d9d9;
+    --color5: #284b63;
+    --color6: #3e6d8d;
+}
+
+.footer-color {
+    background-color: rgb(27, 27, 27) !important;
+    color: var(--color4) !important;
+}
+
+.contact {
+    text-align: right !important;
+    margin-right: 1.5vw;
+    text-decoration: none !important;
+ 
+}
+
+.created-by {
+    text-align: left;
+    margin-left: 1.5vw;
+}
+
+.github-icon {
+    text-decoration: none;
+}
+
+.icon:hover {
+    transform: scale(1.1) !important;
+}
+
+.icon {
+    height: 5vh;
+    width: 5vw;   
+    /* align-items: center; */
+}
+
+.btm-footer {
+   min-height: 100px;
+   margin-bottom: auto !important;  
+}
+
+@media screen and (max-width: 414px) {
+    .btm-footer {
+      font-size: smaller;
+    }
+}
