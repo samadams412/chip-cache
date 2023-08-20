@@ -8,15 +8,37 @@ const Home = () => {
         <div className="container">
           <h1 className="display-4">Discover a Wide Range of Tech Products</h1>
           <p className="lead">Shop the latest tech products at unbeatable prices.</p>
-          <a href="/products" className="btn btn-primary btn-lg">Shop Now</a>
+          <a href="/products" className="btn btn-primary btn-lg">
+            <i className="uil uil-shopping-cart"></i> Shop Now
+          </a>
         </div>
       </div>
       <div className="pt-5 row">
         <div className="col">
-          <p>Column 1</p>
+          <h2>Featured Products</h2>
+          <div className="card">
+            <img src="https://via.placeholder.com/150" className="card-img-top" alt="Product 1" />
+            <div className="card-body">
+              <h5 className="card-title">Product 1</h5>
+              <p className="card-text">A great tech product with amazing features.</p>
+              <a href="#" className="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
         </div>
         <div className="col">
-          <p>Column 2</p>
+          <h2>Testimonials</h2>
+          <div className="card">
+            <div className="card-body">
+              <p className="card-text">"I love E-Shop! The prices are unbeatable, and the quality is top-notch."</p>
+              <p className="card-text">- Jane Doe</p>
+            </div>
+          </div>
+          <div className="card mt-3">
+            <div className="card-body">
+              <p className="card-text">"E-Shop has made shopping for tech products a breeze. Highly recommended!"</p>
+              <p className="card-text">- John Smith</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

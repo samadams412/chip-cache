@@ -270,6 +270,27 @@ db.once('open', async () => {
             category: categories[4]._id,
             image: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/662217_531202_01_front_comping.jpg"
         },
+        {
+            name: "PowerSpec G513 Gaming PC",
+            price: 899.99,
+            description: "The PowerSpec G513 desktop computer is a hearty gaming machine featuring the AMD Ryzen 5 5600X unlocked processor with a Wraith Stealth cooler, an ASRock B550M-C system board powered by a 650W Gold power supply, 16GB DDR4 RAM, a 1TB NVME SSD, and a RTX 3060 12GB discrete video card to provide a fantastic experience playing the most challenging games in the market today!",
+            category: categories[3]._id,
+            image: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/660304_514521_01_front_comping.jpg"
+          },
+          {
+            name: "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+            price: 349.99,
+            description: "Experience unparalleled silence with industry-leading noise cancellation. The WH-1000XM4 headphones use advanced noise cancellation technology to deliver premium sound quality with impressive noise reduction. Enjoy music without distraction and immerse yourself in your favorite tunes.",
+            category: categories[5]._id,
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406979_sd.jpg"
+          },
+          {
+            name: "Samsung Galaxy S22 Ultra 5G",
+            price: 1199.99,
+            description: "Unleash the power of the Samsung Galaxy S22 Ultra 5G, featuring a stunning 6.8-inch Dynamic AMOLED display, a powerful Exynos 990 processor, 12GB of RAM, and a state-of-the-art quad-camera system that lets you capture incredible photos and videos.",
+            category: categories[4]._id,
+            image: "https://image.samsung.com/is/image/samsung/assets/pk/smartphones/galaxy-s22-ultra/gallery/pf_galaxy-s22-ultra_1x-image-island-gold_s.jpg?$ORIGIN_JPG$"
+          },
     ]);
 
     console.log('products seeded');
