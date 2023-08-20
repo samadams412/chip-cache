@@ -2,6 +2,10 @@
 
 Welcome to the E-Shop Ecommerce Website! This is a full-stack MERN (MongoDB, Express.js, React, Node.js) application that provides an online platform for selling and purchasing various products. The website utilizes JWT (JSON Web Token) authentication to secure user authentication and authorization.
 
+## Deployed App
+
+- [Here](https://e-shopp-95df79c2fe6e.herokuapp.com/)
+
 ## Features
 
 - User Registration and Login with JWT Authentication
