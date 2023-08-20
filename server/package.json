@@ -4,11 +4,18 @@
   "description": "server package.json",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "apollo-server-express": "^3.12.0",
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "graphql": "^16.8.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.3",
+    "stripe": "^13.2.0"
   }
 }
