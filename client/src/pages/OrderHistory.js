@@ -16,8 +16,8 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container product-font my-1 mt-3">
-        <Link id="link-color" to="/">← Back to Products</Link>
+      <div className="container my-1 mt-3">
+        <Link className="text__primary-2" id="" to="/">← Back to Products</Link>
 
         {user ? (
           <>
@@ -45,7 +45,7 @@ function OrderHistory() {
                         </Link>
                         </div>
                         
-                      <div className='order-info product-font col-sm-4 col-md-5'>
+                      <div className='order-info col-sm-4 col-md-5'>
                       <p id='o-id'>Order ID: <br></br> {order._id}</p>
                         <p id='o-date'>Ordered: <br></br> {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</p>
                         </div>
