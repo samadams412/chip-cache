@@ -9,10 +9,10 @@
   --first-color: hsl(var(--hue-color), 20%, 90%);
   --second-color: hsl(var(--hue-color), 90%, 50%);
   --third-color: hsl(var(--hue-color), 90%, 1%);
-  --text-color: hsl(var(--hue-color), 90%, 1%);
-  --color1: #515751;
-  --color2: #4382F1; /* Corrected color code */
-  --color3: #FDFFFC;
+  --text-color: #14110F;
+  --color1: #1D70A2; /* Corrected color code */
+  --color2: #FDFFFC;
+  --color3: #2892D7;
   --color4: #14110F;
   --color5: #284b63;
    /*========== Font and typography ==========*/
@@ -71,32 +71,16 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin-top: 1rem;
-  font: 600 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  text-align: center;
-  /* img size is 50x50 */
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 1.92s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 1.92s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 1.92s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 1.92s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
+body{
+  background-color: #FDFFFC;
 }
-body::before {
+/* body::before {
   content: "E-Shop";
   font-size: 8rem;
   font-weight: 100;
   font-style: normal;
   color: var(--second-color);
-}
+} */
 
 @media (max-width: 768px) {
   body::before {
@@ -108,7 +92,7 @@ h1,
 h2,
 h3,
 h4 {
-  font: 600 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  font-family: "Russo", sans-serif;
 }
 
 ul {
@@ -124,17 +108,19 @@ img {
   height: auto;
 }
 
-.text-primary{
-  color: #000!important;
-  font-size: 25px;
+.text__primary{
+  color: #0c5583;
+  font-size: 30px;
+  font-weight: 750;
 }
 /*========== NAVBAR ===========*/
 .nav__container {
-  color: var(--second-color);
+  color: #fff;
   font-weight: bold;
   border: 1px solid var(--second-color);
   border-radius: 5px;
   margin: 3px 5px;
+  background-color: #1D70A2;
 }
 
 .navbar-toggler{
@@ -143,14 +129,16 @@ img {
 }
 
 .navbar-brand{
-  color: var(--second-color);
+  color: #fff;
 }
 
 .nav-link{
   padding-right: 6px;
-  color: var(--second-color);
+  color: #fff;
   text-align: left;
+  width: 100px;
 }
+
 /*========== JUMBOTRON ===========*/
 .jumbotron__btn{
   background-color: var(--third-color);
@@ -223,17 +211,41 @@ img {
 }
 /*========== CATEGORY MENU ===========*/
 .category__menu{
-  border: 1px solid var(--first-color);
+  border: 1px solid #1D70A2;
+  border-radius: 5px;
 }
 
 .category__btn{
   font-weight: 600;
-  color: var(--second-color);
+  color: #1D70A2;
 }
+
 /*========== DETAILS PAGE ===========*/
 
-/*========== FEATURED PRODUCTS ===========*/
+/*========== PRODUCTS LIST ===========*/
+.pagination__btn{
+  margin-right: 2px;
+}
 
+/*========== FEATURED PRODUCTS ===========*/
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.fade-out-left {
+  animation: fadeOutLeft 1s ease-in-out;
+}
+
+.next-product__btn {
+  animation: fadeOutLeft 1s ease-in-out; /* Apply the animation */
+}
 
 
 

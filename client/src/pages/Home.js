@@ -29,8 +29,18 @@ const featuredProducts = [
 const Home = () => {
   //Keeps track of current displayed product index
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
+  const [animateOut, setAnimateOut] = useState(false);
 
   const handleNextProduct = () => {
+    // Trigger animation by adding the class
+    setAnimateOut(true);
+     // Delay updating product and resetting animation class
+     setTimeout(() => {
+      // Update current product data
+      // Reset animation
+      setAnimateOut(false);
+    }, 500); // Adjust the delay to match your animation duration
+  
     //modulus operator helps stay inbound the array and loop through
     setCurrentProductIndex((prevIndex) => (prevIndex + 1) % featuredProducts.length);
   };
@@ -43,17 +53,18 @@ const Home = () => {
       <div className="pt-5 row">
         <div className="col">
           <h2 className="text-primary">Featured Products</h2>
-          <div className="card">
+          <div className={`card ${animateOut ? 'fade-out-left' : ''}`}>
             <img src={currentProduct.image} className="card-img-top" alt={currentProduct.name} />
-            <div className="card-body">
+            <div className="card-body text-center">
               <h5 className="card-title">{currentProduct.name}</h5>
               
-              <button className="btn btn-primary"><a href="/Products">Buy Now</a></button>
-              <button className="btn btn-secondary mt-2" onClick={handleNextProduct}>
+              <button className="btn card__btn-2 my-3">Buy Now</button>
+              <button className="btn card__btn-1 mx-3" onClick={handleNextProduct}>
                 Next Product
               </button>
             </div>
           </div>
+
         </div>
         <div className="col">
           <h2 className="text-primary">Testimonials</h2>

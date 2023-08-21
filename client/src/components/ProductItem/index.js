@@ -45,7 +45,7 @@ function ProductItem(item) {
       </Link>
       <div className="card-body d-flex flex-column justify-content-between">
         <h5 className="card-title">{name}</h5>
-        <p className="card-text">${price.toFixed(2)}</p>
+        <p className="card-text mt-auto">${price.toFixed(2)}</p>
         <button
           onClick={addToCart}
           type="button"

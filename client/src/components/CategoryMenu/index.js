@@ -12,7 +12,7 @@ import '../../index.css'
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
-  console.log(state)
+  const { category, currentCategory } = state; // Destructure currentCategory from state
 
   const { categories } = state;
 
@@ -50,14 +50,22 @@ function CategoryMenu() {
   return (
     <div className='container'>
       <div className='row'>
-      <h2 className="mt-3 text-primary" id=''>Categories</h2>
-      <button id="add-btn" type="button" className="product-font view-all-button cat-btn btn mt-2"
-          onClick={() => {
-            handleClick(window.location.reload());
-          }}
-        >
-          <h3 className='category__btn'>View All</h3>
-        </button>
+      <h2 className="mt-3 text__primary" id=''>Categories</h2>
+      {currentCategory && (
+          <button
+            id="add-btn"
+            type="button"
+            className="product-font view-all-button cat-btn btn mt-2"
+            onClick={() => {
+              dispatch({
+                type: UPDATE_CURRENT_CATEGORY,
+                currentCategory: null, // Reset currentCategory when "View All" is clicked
+              });
+            }}
+          >
+            <h3 className='category__btn'>View All</h3>
+          </button>
+        )}
       </div>
       <div className='row category__menu'>
         

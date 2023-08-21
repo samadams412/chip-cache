@@ -77,7 +77,7 @@ function ProductList() {
       ) : (
         <h3>You haven't added any products yet!</h3>
       )}
-      <div className="pagination">
+      <div className="pagination pagination__btn">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             className={`page-link ${
