@@ -14,6 +14,15 @@ Backend tasks
 
 Frontend tasks
 
-- [ ] determine which pages, components there will be
-- [ ] start with large components and break them down smaller later on
-- [ ] 
+- [x] determine which pages, components there will be
+- [x] start with large components and break them down smaller later on
+- [ ] Fix styling on login/signup pages
+- [ ] Fix styling on cart component
+- [ ] Sizing of items in Order History page
+- [ ] Add more seed data
+- [ ] Add more to the home page 
+
+Other future tasks
+
+- [ ] Add more filter ability other than category(i.e, price, etc.)
+- [ ] Add profile page for user to change user settings(change email,password, etc.) 

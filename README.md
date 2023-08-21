@@ -22,16 +22,18 @@ Welcome to the E-Shop Ecommerce Website! This is a full-stack MERN (MongoDB, Exp
 - React: Frontend library for building the user interface.
 - Node.js: Server-side JavaScript runtime environment.
 - JWT: JSON Web Token for user authentication and authorization.
-- (Add other technologies and libraries you've used)
+
 
 ## Installation
 
 1. Clone the repository:
-    git clone https://github.com/your-username/e-shop-ecommerce.git
-    cd e-shop-ecommerce
+    git clone https://github.com/sadams412/e-shop.git
+    cd e-shop
 
 2. Install backend & frontend dependencies:
     ``npm install`` in root
+3. Install seed data:
+    ``npm run seed``
 
 ## Usage
 
