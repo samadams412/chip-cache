@@ -62,7 +62,7 @@ export default function FeaturedProducts() {
 
   const currentProduct = featuredProducts[currentProductIndex];
   return (
-    <div className="col">
+    <div className="col-md-6">
           <h2 className="text__primary">Featured Products</h2>
           <div className={`card featured__card ${animateOut ? 'fade-out-left' : ''}`} onTransitionEnd={handleTransitionEnd}>
             <img src={currentProduct.image} className="card-img-top" alt={currentProduct.name} />
