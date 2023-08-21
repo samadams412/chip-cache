@@ -17,8 +17,17 @@ img {
 
 .cart-item-display {
     text-align: center;
+    color: #000;
     /* width: */
     
+}
+
+.cart__btn{
+    color: #000;
+}
+
+.cart__btn-remove{
+    color: red;
 }
 
 .img-card {

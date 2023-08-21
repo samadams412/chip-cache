@@ -110,7 +110,15 @@ img {
 
 .text__primary{
   color: #0c5583;
+  font-family: "Russo", sans-serif;
   font-size: 30px;
+  font-weight: 750;
+}
+
+.text__primary-2{
+  color: #0c5583;
+  font-family: "Russo", sans-serif;
+  font-size: 20px;
   font-weight: 750;
 }
 /*========== NAVBAR ===========*/
@@ -139,9 +147,16 @@ img {
   width: 100px;
 }
 
+.nav-link:hover{
+  font-size: 1.25rem;
+  color: #14110F;
+  text-align: left;
+  width: 100px;
+}
+
 /*========== JUMBOTRON ===========*/
 .jumbotron__btn{
-  background-color: var(--third-color);
+  background-color: #1D70A2;
   color: #FDFFFC;
   border: none;
   border-radius: 5px;
@@ -168,7 +183,7 @@ img {
   right: -10px;
   bottom: -10px;
   z-index: -1;
-  background: linear-gradient(45deg, #fff, #000, #fff);
+  background: linear-gradient(45deg, #1D70A2, #FDFFFC, #1D70A2);
   background-size: 300% 300%;
   animation: glowing 2s linear infinite;
   border-radius: 5px;
@@ -197,8 +212,14 @@ img {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.jumbotron__title{
+  font-weight: 700;
+  color: #14110F;
+}
+
 .jumbotron__sub-title{
-  font-weight: bold;
+  font-weight: 600;
+  color: #1D70A2;
 }
 
 /*========== CARDS ===========*/
@@ -216,17 +237,52 @@ img {
 }
 
 .category__btn{
-  font-weight: 600;
-  color: #1D70A2;
+  color: #14110F;
+  font-weight: 500;
 }
+
+.category__btn:hover{
+  color: #FDFFFC;
+  font-weight: 500;
+  background-color: #1D70A2;
+}
+
 
 /*========== DETAILS PAGE ===========*/
 
 /*========== PRODUCTS LIST ===========*/
-.pagination__btn{
+.pagination__btn button{
   margin-right: 2px;
+  
+}
+.page-link{
+  color: #14110F;
+  border-radius: 5px;
+}
+.page-link:active,
+.page-link:focus{
+  background-color: #1D70A2;
+  color: #FDFFFC;
 }
 
+.scroll__btn{
+  color: #1D70A2;
+  font-weight: 600;
+  font-size: 30px;
+}
+/*========== PRODUCTS ITEM ===========*/
+.add-to-cart__btn{
+  background-color: #1D70A2;
+  color: #FDFFFC;
+}
+.add-to-cart__btn:hover{
+  background-color: #1D70A2;
+  color: #FDFFFC;
+}
+.product__card{
+  border: 1px solid #1D70A2;
+  margin: 3px 3px;
+}
 /*========== FEATURED PRODUCTS ===========*/
 @keyframes fadeOutLeft {
   from {
@@ -239,6 +295,15 @@ img {
   }
 }
 
+.testimonial__card{
+  color: #1D70A2;
+}
+
+.testimonial__author{
+  font-weight: 600;
+  color: #14110F
+}
+
 .fade-out-left {
   animation: fadeOutLeft 1s ease-in-out;
 }
@@ -247,7 +312,35 @@ img {
   animation: fadeOutLeft 1s ease-in-out; /* Apply the animation */
 }
 
+.featured__card{
+  border: 1px solid #1D70A2;
+}
 
+.card__btn-2{
+  background-color: #1D70A2;
+  color: #FDFFFC;
+}
+
+.card__btn-1{
+  background-color: #FDFFFC;
+  font-weight: 500;
+}
+
+/*========== SIGNUP FORM ===========*/
+.signup__label{
+  font-family: "Russo", sans-serif;
+  color: #14110F;
+  font-weight: 600;
+}
+
+.submit__btn{
+  background-color: #1D70A2;
+  color: #14110F;
+}
+
+.btn-disabled{
+  background-color: #1D70A2;
+}
 
 /* Cool infinite background scrolling animation.
  * Twitter: @kootoopas

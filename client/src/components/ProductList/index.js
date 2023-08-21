@@ -55,8 +55,8 @@ function ProductList() {
   };
 
   return (
-    <div className="container text-center my-2">
-      <h2 className="text-center gamer-font" id="r-product">
+    <div className="container text-center my-2" id="top">
+      <h2 className="text-center text__primary">
         Products
       </h2>
       {state.products.length ? (
@@ -90,6 +90,7 @@ function ProductList() {
           </button>
         ))}
       </div>
+      <a href="#top" className='uil uil-arrow-up scroll__btn'></a>
       {loading ? <p>Loading</p> : null}
     </div>
   );

@@ -7,9 +7,13 @@
     --color6: #3e6d8d;
 }
 
+span{
+    font-weight: 600;
+}
+
 .footer-color {
-    background-color: rgb(27, 27, 27) !important;
-    color: var(--color4) !important;
+    background-color: #1D70A2;
+    color: #FDFFFC;
 }
 
 .contact {
@@ -18,14 +22,20 @@
     text-decoration: none !important;
  
 }
-
-.created-by {
+.uil{
+    color: #14110F;
+}
+span{
+    color: #FDFFFC;
+}
+.created-by{
     text-align: left;
     margin-left: 1.5vw;
 }
 
 .github-icon {
     text-decoration: none;
+    color: #14110F;
 }
 
 .icon:hover {

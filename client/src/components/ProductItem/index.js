@@ -34,7 +34,7 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card product-card h-100">
+    <div className="card product__card h-100">
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
@@ -49,7 +49,7 @@ function ProductItem(item) {
         <button
           onClick={addToCart}
           type="button"
-          className="btn btn-success mt-2 align-self-center"
+          className="btn add-to-cart__btn mt-2 align-self-center"
         >
           Add to Cart
         </button>

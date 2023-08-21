@@ -74,7 +74,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart product-font">
+    <div className="cart">
       <div className="close" onClick={toggleCart}>
         x
       </div>
@@ -98,13 +98,13 @@ const Cart = () => {
               </div>
             ) : (
               <div className="mt-2 mb-2">
-              <span>You must be logged in to check out!</span>
+              <span className='cart__text'>You must be logged in to check out!</span>
               </div>
             )}
           </div>
         </div>
       ) : (
-        <h5>
+        <h5 className='cart__text'>
           Your cart is empty
         </h5>
       )}

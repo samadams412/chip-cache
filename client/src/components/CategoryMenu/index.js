@@ -73,7 +73,7 @@ function CategoryMenu() {
           <div className='d-flex justify-content-evenly col-6 col-sm-4 col-md-4 col-lg-2'>
 
 
-            <button id="add-btn" type="button" className="cat-btn product-font btn mt-2 category__btn"
+            <button id="add-btn" type="button" className="btn my-2 category__btn"
               key={oneCategory._id}
               onClick={() => {
                 handleClick(oneCategory._id);

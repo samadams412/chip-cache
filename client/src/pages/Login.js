@@ -32,14 +32,14 @@ function Login(props) {
   };
 
   return (
-    <div id="login-text" className="container my-1 product-font">
-      <Link id="link-color" to="/signup">← Go to Signup</Link>
+    <div id="login-text" className="container my-1">
+     
 
       <h2 className="mt-3 mb-3">Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3 col-sm-4">
-          <label htmlFor="exampleFormControlInput1" className="form-label">
-            Email address
+          <label className="signup__label form-label" htmlFor="exampleFormControlInput1">
+            Email address:
           </label>
           <input
             type="email"
@@ -51,8 +51,8 @@ function Login(props) {
           ></input>
         </div>
         <div className="mb-3 col-sm-4">
-          <label htmlFor="exampleFormControlInput1" class="form-label">
-            Password
+          <label className="signup__label form-label" htmlFor="exampleFormControlInput1">
+            Password:
           </label>
           <input
             type="password"
@@ -69,11 +69,12 @@ function Login(props) {
           </div>
         ) : null}
         <div className="flex-row flex-end">
-        <button id="add-btn"type="submit" className="btn mt-2">Submit</button>
+        <button id="add-btn"type="submit" className="btn mt-2 submit__btn">Submit</button>
          
           {/* <button type="submit">Submit</button> */}
         </div>
       </form>
+      <Link className="text__primary-2" id="link-color" to="/signup">← Signup Instead</Link>
     </div>
   );
 }
