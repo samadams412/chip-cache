@@ -1,9 +1,9 @@
 :root {
-    --color1: #353535;
-    --color2: #3c6e71;
-    --color3: #ffffff;
-    --color4: #d9d9d9;
-    --color5: #284b63;
+  --hue-color: 214; /*Uniform shade of blue*/
+  --first-color: hsl(var(--hue-color), 20%, 90%);
+  --second-color: hsl(var(--hue-color), 90%, 20%);
+  --third-color: hsl(var(--hue-color), 90%, 1%);
+  --text-color: hsl(var(--hue-color), 90%, 1%);
   }
   
   .cart {
@@ -58,7 +58,7 @@
     width: 50px;
     height: 50px;
     z-index: 1;
-    background-color: #d9d9d9;
+    background-color: var();
     border-radius: 1%;
     text-align: center;
     border: 1px solid transparent;

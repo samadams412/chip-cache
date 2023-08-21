@@ -106,19 +106,19 @@ function Detail() {
                   {/* <p>
                     <strong>Price: </strong>${currentProduct.price.toString().includes(".") ? currentProduct.price : currentProduct.price + ".00"}
                     </p> */}
-                    <div className="mb-3 cart-btns">
+                    <div className="mb-3">
                       <div className="price">
                         {/* <p>${currentProduct?.price?.toString().includes('.') ? currentProduct.price : currentProduct.price + ".00"}</p> */}
                         <p>{showPrice(currentProduct)}</p>
                       </div>
 
-                      <button className="btn" onClick={addToCart}>
+                      <button className="btn details__btn btn-success" onClick={addToCart}>
                         Add to Cart
                       </button>
                       <br></br>
                       <br></br>
                       <button
-                        className="btn"
+                        className="btn btn-danger"
                         disabled={
                           !cart.find((p) => p._id === currentProduct._id)
                         }

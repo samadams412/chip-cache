@@ -5,6 +5,7 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
+import "./index.css";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { StoreProvider } from "./utils/GlobalState";
@@ -23,9 +24,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
   const token = localStorage.getItem("id_token");
-  // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
@@ -42,41 +41,28 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Router>
-      <body>
-      <div>
-        <StoreProvider>
-         <Nav/>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Products" element={<Products />} />
-            <Route path="/login" element={<Login />} />
+      <Router>
+        <div>
+          <StoreProvider>
+            <Nav/>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route 
-                path="/success" 
-                element={<Success />} 
-              />
-               <Route path="/orderHistory" element={<OrderHistory />} />
-              <Route
-                path="/products/:id"
-                element={<Detail />}
-              />
-               <Route 
-                path="/success" 
-                element={<Success />} 
-              />
-          </Routes>
-          <Footer/>
-        </StoreProvider>
-      </div>
-      </body>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      />
-    </Router>
-  </ApolloProvider>
+              <Route path="/success" element={<Success />} />
+              <Route path="/orderHistory" element={<OrderHistory />} />
+              <Route path="/products/:id" element={<Detail />} />
+            </Routes>
+            <Footer/>
+          </StoreProvider>
+        </div>
+        
+      </Router>
+    </ApolloProvider>
   );
 }
 
 export default App;
+
+

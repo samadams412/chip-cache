@@ -1,18 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
-// import "./productItem.css";
-import "../../utils/showPrice"
-import '../../index.css'
-
 import { idbPromise } from "../../utils/helpers";
+import "../../index.css";
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
-  const { image, name, _id, price, quantity } = item;
+  const { image, name, _id, price } = item;
 
   const { cart } = state;
 
@@ -38,36 +34,24 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="product-font product-card h-100 px-3 py-3">
-      {/* <div className='d-flex flex-column justify-content-between flex-grow-1'> */}
-     
-        <p>{name}</p>
-
-        <Link to={`/products/${_id}`}>
-          <img
-            alt={name}
-            src={image}
-            height="150vh"
-            width="150vw"
-            padding="2vw"
-            className="cardImage"
-          />
-        </Link>
-        <h2 className="mt-2 ">
-          ${price.toString().includes(".") ? price : price + ".00"}
-          
-         
-        </h2>
-      {/* </div> */}
-      <div className="btn-box align-self-center">
+    <div className="card product-card h-100">
+      <Link to={`/products/${_id}`}>
+        <img
+          alt={name}
+          src={image}
+          className="card-img-top"
+          style={{ height: "100%", objectFit: "contain" }}
+        />
+      </Link>
+      <div className="card-body d-flex flex-column justify-content-between">
+        <h5 className="card-title">{name}</h5>
+        <p className="card-text">${price.toFixed(2)}</p>
         <button
-      
-          id="add-btn-2"
           onClick={addToCart}
           type="button"
-          className="btn mt-2"
+          className="btn btn-success mt-2 align-self-center"
         >
-          Add to cart
+          Add to Cart
         </button>
       </div>
     </div>
@@ -75,3 +59,4 @@ function ProductItem(item) {
 }
 
 export default ProductItem;
+

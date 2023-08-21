@@ -4,28 +4,195 @@
 
 
 :root {
-  --color1: #353535;
-  --color2: #3c6e71;
-  --color3: #ffffff;
-  --color4: #d9d9d9;
+  --header-height: 3rem;
+  --hue-color: 214; /*Uniform shade of blue*/
+  --first-color: hsl(var(--hue-color), 20%, 90%);
+  --second-color: hsl(var(--hue-color), 90%, 50%);
+  --third-color: hsl(var(--hue-color), 90%, 1%);
+  --text-color: hsl(var(--hue-color), 90%, 1%);
+  --color1: #515751;
+  --color2: #4382F1; /* Corrected color code */
+  --color3: #FDFFFC;
+  --color4: #14110F;
   --color5: #284b63;
+   /*========== Font and typography ==========*/
+   --body-font: "Russo", sans-serif;
+     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 800;
+
+  /*========== Margins Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
+}
 
+body {
+  margin-top: 1rem;
+  font: 600 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  content: "E-Shop";
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--second-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font: 600 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-primary{
+  color: #000!important;
+  font-size: 25px;
+}
+/*========== NAVBAR ===========*/
+.nav__container {
+  color: var(--second-color);
+  font-weight: bold;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  margin: 3px 5px;
+}
+
+
+.navbar-brand{
+  color: var(--second-color);
+}
+
+.navbar-toggler{
+  background-color: var(--second-color);
+}
+
+.nav-link{
+  padding-right: 6px;
+  color: var(--second-color);
+  text-align: left;
+}
+/*========== JUMBOTRON ===========*/
+.jumbotron__btn{
+  background-color: var(--third-color);
+  color: #FDFFFC;
+}
+
+.jumbotron__btn:hover{
+  background-color: var(--first-color);
 }
 
 .btn:hover {
   transform: scale(1.1);
 }
 
-body {
-	/* background: linear-gradient(-45deg, #c72f1b, #251650, #212125, #1f0f68); */
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
-	height: 100vh;
-	
+.jumbotron {
+  border-radius: 5px;
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.jumbotron__transparent{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.jumbotron__sub-title{
+  font-weight: bold;
+}
+
+/*========== CARDS ===========*/
+.card-title{
+  font-weight: bold;
+}
+.card-text{
+  color: black!important;
+  /* font-weight: bold; */
+}
+/*========== CATEGORY MENU ===========*/
+.category__menu{
+  border: 1px solid var(--first-color);
+}
+
+.category__btn{
+  font-weight: 600;
+  color: var(--second-color);
+}
+/*========== DETAILS PAGE ===========*/
+.details__btn{
+ 
 }
 
 @keyframes gradient {
@@ -39,3 +206,53 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:200);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
