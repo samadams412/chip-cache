@@ -18,8 +18,9 @@ function Nav() {
           </button>
           <div className='gamer-font collapse navbar-collapse'
           id="navbarNavAltMarkup">
-            <a className="nav-link" href="/Products">Products</a>
-            <a className="nav-link" href="/OrderHistory">Order History</a>
+            <Link to="/Products" className="nav-link">Products</Link>
+            {/* <a className="nav-link" href="/Products">Products</a> */}
+            <Link to="/OrderHistory" className="nav-link">History</Link>
             <a className="nav-link" href="/" onClick={() => Auth.logout()}>Logout</a>
            
           </div>
@@ -37,9 +38,9 @@ function Nav() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <a className="nav-link" href="/Products">- Products</a>
-            <a className="nav-link" href="/Login">- Login</a>
-            <a className="nav-link" href="/Signup">- Signup</a>
+          <Link to="/Products" className="nav-link">Products</Link>
+          <Link to="/Login" className="nav-link">Login</Link>
+          <Link to="/Signup" className="nav-link">Signup</Link>
           </div>
           <Cart />
         </div>
