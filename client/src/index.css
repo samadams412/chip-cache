@@ -178,7 +178,7 @@ img {
   font-weight: bold;
 }
 .card-text{
-  color: black!important;
+  color: var(--second-color);
   /* font-weight: bold; */
 }
 /*========== CATEGORY MENU ===========*/

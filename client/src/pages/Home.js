@@ -9,10 +9,10 @@ const Home = () => {
         <div className="col">
           <h2 className="text-primary">Featured Products</h2>
           <div className="card">
-            <img src="https://via.placeholder.com/150" className="card-img-top" alt="Product 1" />
+            <img src="https://m.media-amazon.com/images/I/71CPFiLxiQL.__AC_SY300_SX300_QL70_FMwebp_.jpg" className="card-img-top" alt="Product 1" />
             <div className="card-body">
-              <h5 className="card-title">Product 1</h5>
-              <p className="card-text">A great tech product with amazing features.</p>
+              <h5 className="card-title">NVIDIA GeForce RTX 3080</h5>
+              <p className="card-text">Experience the ultimate gaming performance with the NVIDIA GeForce RTX 3080 graphics card. Powered by the Ampere architecture, this graphics card delivers unparalleled ray tracing and AI-powered gaming experiences. With 10GB of GDDR6X memory and a massive CUDA core count, you can push your games to their limits at high resolutions and frame rates.</p>
               <a href="#" className="btn btn-primary">Buy Now</a>
             </div>
           </div>

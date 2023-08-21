@@ -19,6 +19,13 @@ db.once('open', async () => {
 
     const products = await Product.insertMany([
         {
+            name: "NVIDIA GeForce RTX 3080",
+            price: 799.99,
+            description: "Experience the ultimate gaming performance with the NVIDIA GeForce RTX 3080 graphics card. Powered by the Ampere architecture, this graphics card delivers unparalleled ray tracing and AI-powered gaming experiences. With 10GB of GDDR6X memory and a massive CUDA core count, you can push your games to their limits at high resolutions and frame rates.",
+            category: categories[3]._id,
+            image: "https://m.media-amazon.com/images/I/71CPFiLxiQL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
             name: "WD 2TB Elements Portable External Hard Drive",
             price: 64,
             description: "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
