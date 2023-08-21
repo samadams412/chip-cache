@@ -77,13 +77,13 @@ body {
   text-align: center;
   /* img size is 50x50 */
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  -webkit-animation: bg-scrolling-reverse 1.92s infinite;
   /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  -moz-animation: bg-scrolling-reverse 1.92s infinite;
   /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  -o-animation: bg-scrolling-reverse 1.92s infinite;
   /* Opera 12+ */
-  animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 1.92s infinite;
   /* IE 10+ */
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
@@ -96,6 +96,12 @@ body::before {
   font-weight: 100;
   font-style: normal;
   color: var(--second-color);
+}
+
+@media (max-width: 768px) {
+  body::before {
+    font-size: 4rem; /* Adjust the font size for smaller devices */
+  }
 }
 
 h1,
@@ -131,13 +137,13 @@ img {
   margin: 3px 5px;
 }
 
+.navbar-toggler{
+    padding: 0.25rem 0.5rem; 
+    font-size: 0.75rem; 
+}
 
 .navbar-brand{
   color: var(--second-color);
-}
-
-.navbar-toggler{
-  background-color: var(--second-color);
 }
 
 .nav-link{
@@ -149,10 +155,44 @@ img {
 .jumbotron__btn{
   background-color: var(--third-color);
   color: #FDFFFC;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
 }
 
-.jumbotron__btn:hover{
-  background-color: var(--first-color);
+.jumbotron__btn:hover {
+  background-color: white;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  color: #fff;
+  font-size: 25px;
+}
+
+/* Neon Glow Animation */
+.jumbotron__btn:hover:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  background: linear-gradient(45deg, #fff, #000, #fff);
+  background-size: 300% 300%;
+  animation: glowing 2s linear infinite;
+  border-radius: 5px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
 }
 
 .btn:hover {
@@ -191,21 +231,10 @@ img {
   color: var(--second-color);
 }
 /*========== DETAILS PAGE ===========*/
-.details__btn{
- 
-}
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+/*========== FEATURED PRODUCTS ===========*/
+
+
 
 
 /* Cool infinite background scrolling animation.
