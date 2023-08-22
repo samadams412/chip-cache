@@ -27,7 +27,7 @@ function Nav() {
       return (
       
         <div className={`container-fluid nav__container ${scroll ? 'scroll' : ""}`}>
-          <a className="navbar-brand" href="/">E-Shop</a>
+          <a className="navbar-brand" href="/">CC</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +48,7 @@ function Nav() {
       return (
         
         <div className={`container-fluid nav__container ${scroll ? 'scroll' : ""}`}>
-          <a className="navbar-brand" href="/">E-shop</a>
+          <a className="navbar-brand" href="/">Home</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

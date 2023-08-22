@@ -34,22 +34,22 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card product__card h-100">
+    <div className="card product__card h-100 d-flex flex-column justify-content-between align-items-center" style={{ maxWidth: "200px" }}>
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
           src={image}
           className="card-img-top"
-          style={{ height: "100%", objectFit: "contain" }}
+          style={{ height: "150px", objectFit: "contain" }}
         />
       </Link>
-      <div className="card-body d-flex flex-column justify-content-between">
+      <div className="card-body text-center">
         <h5 className="card-title">{name}</h5>
-        <p className="card-text mt-auto">${price.toFixed(2)}</p>
+        <p className="card-text">${price.toFixed(2)}</p>
         <button
           onClick={addToCart}
           type="button"
-          className="btn add-to-cart__btn mt-2 align-self-center"
+          className="btn add-to-cart__btn mt-2"
         >
           Add to Cart
         </button>
@@ -59,4 +59,6 @@ function ProductItem(item) {
 }
 
 export default ProductItem;
+
+
 

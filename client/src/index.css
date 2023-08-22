@@ -1,3 +1,4 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu Condensed+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
@@ -149,6 +150,12 @@ img {
     margin-top: 0;
     margin-bottom: 0;
 }
+.navbar-toggler:hover{
+  background-color: white;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  color: #14110F;
+  transform: scale(1.0);
+}
 
 .navbar-brand{
   color: #fff;
@@ -182,14 +189,15 @@ img {
 
 .jumbotron__btn{
   background-color: #eff2ed;
-  position: relative;
   color: #14110F;
   border: none;
   border-radius: 5px;
   font-weight: 500;
-  justify-content: center;
+  justify-content: end;
   transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1;
+  position: absolute;
+  
 }
 
 .jumbotron__btn:hover {
@@ -200,7 +208,14 @@ img {
   transform: scale(1.0);
 }
 
+.jumbo{
+  padding: 0;
+  margin: 0;
+}
 
+col{
+  padding: 0;
+}
 
 @keyframes glowing {
   0% {
@@ -228,7 +243,7 @@ img {
 .jumbotron__sub-title{
   font-size: 30px;
   font-weight: 600;
-  color: #14110F;
+  color: #ebede9;
 }
 
 /*========== CARDS ===========*/
@@ -264,7 +279,22 @@ img {
 
 
 /*========== DETAILS PAGE ===========*/
-
+.details__card{
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+}
+.details__description{
+  font-family: "Russo", sans-serif;
+}
+.details__name{
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+.details__price{
+  font-family: "Victor Mono", sans-serif;
+  font-weight: 600;
+  color: #14110F;
+}
 /*========== PRODUCTS LIST ===========*/
 .pagination__btn button{
   margin-right: 2px;
@@ -299,16 +329,7 @@ img {
   margin: 3px 3px;
 }
 /*========== FEATURED PRODUCTS ===========*/
-@keyframes fadeOutLeft {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}
+
 
 .testimonial__card{
   color: #1D70A2;
@@ -319,13 +340,6 @@ img {
   color: #14110F
 }
 
-.fade-out-left {
-  animation: fadeOutLeft 1s ease-in-out;
-}
-
-.next-product__btn {
-  animation: fadeOutLeft 1s ease-in-out; /* Apply the animation */
-}
 
 .featured__card{
   border: 1px solid #1D70A2;
@@ -357,51 +371,48 @@ img {
   background-color: #1D70A2;
 }
 
-/* Cool infinite background scrolling animation.
- * Twitter: @kootoopas
- */
-/* Exo thin font from Google. */
-@import url(https://fonts.googleapis.com/css?family=Exo:200);
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-/* Animations */
-@-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
+/*========== LOGO ===========*/
+.logo__home {
+  width: 200px;
+  height: auto;
 }
-@-moz-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
+
+/* .logo__home:hover{
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  color: #14110F;
+  transform: scale(1.0);
+  border-radius: 5px;
+  padding: 2px;
+} */
+/* .featured-products-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
-@-o-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
+
+.featured-products-container .btn {
+  margin-top: 20px;
 }
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
+
+.featured-product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 200px; 
+  font-size: .75rem;
+  
 }
-@-webkit-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
+
+.featured-product-card img {
+  max-width: 100%;
+  height: auto;
 }
-@-moz-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
+.featured-product-card-title{
+  font-size: 1rem;
 }
-@-o-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-/* Main styles */
+
+.arrow-button{
+  padding: 2px;
+  margin: 2px;
+} */

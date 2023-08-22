@@ -11,7 +11,6 @@ import {
 } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
-// import "./pages.css";
 import showPrice from '../utils/showPrice'
 import "../index.css"
 
@@ -86,9 +85,9 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="product-font container my-1" id="whiteText">
+        <div className="container my-1">
           <div className="mt-3">
-            <Link className="product-link" to="/">
+            <Link className="product-link text__primary-2" to="/">
               ← Back to Products
             </Link>
           </div>
@@ -96,18 +95,34 @@ function Detail() {
             <div className="col-12">
               <div className="row">
                 <div className="col-md-7 card-margin">
-                  <h2 className="mt-3 mb-3">{currentProduct.name}</h2>
+                  <h2 className="mt-3 mb-3 details__name">{currentProduct.name}</h2>
                   <hr className="line-sep"></hr>
 
-                  <p className="mt-4 mb-4">{currentProduct.description}</p>
-
-                  <hr className="line-sep"></hr>
+                  <p className="mt-4 mb-4 details__description">{currentProduct.description}</p>
 
                   {/* <p>
                     <strong>Price: </strong>${currentProduct.price.toString().includes(".") ? currentProduct.price : currentProduct.price + ".00"}
                     </p> */}
-                    <div className="mb-3">
-                      <div className="price">
+                    
+                 
+                  <hr className="line-sep"></hr>
+                </div>
+
+                {/* <div className='card col-md-6 col-lg-4 product-img justify-content-center align-items-center'> */}
+
+                <div className="details__card card mb-5 col-md-5 col-lg-4 product-img justify-content-center align-items-center">
+                  <img
+                    src={currentProduct.image}
+                    alt={currentProduct.name}
+                    // height={300}
+                    // width={300}
+                    width="50%"
+                    height="50%"
+                    className="testImg"
+                    // img-fluid = 'maxWidth: 30%'
+                  />
+                  <div className="mb-3">
+                      <div className="details__price">
                         {/* <p>${currentProduct?.price?.toString().includes('.') ? currentProduct.price : currentProduct.price + ".00"}</p> */}
                         <p>{showPrice(currentProduct)}</p>
                       </div>
@@ -118,7 +133,7 @@ function Detail() {
                       <br></br>
                       <br></br>
                       <button
-                        className="btn btn-danger"
+                        className="btn btn-danger details__btn"
                         disabled={
                           !cart.find((p) => p._id === currentProduct._id)
                         }
@@ -129,24 +144,8 @@ function Detail() {
                       <br></br>
                       <br></br>
                     </div>
-                 
-                  <hr className="line-sep"></hr>
                 </div>
-
-                {/* <div className='card col-md-6 col-lg-4 product-img justify-content-center align-items-center'> */}
-
-                <div className="card mb-5 col-md-5 col-lg-4 product-img justify-content-center align-items-center imgDiv">
-                  <img
-                    src={currentProduct.image}
-                    alt={currentProduct.name}
-                    // height={300}
-                    // width={300}
-                    width="95%"
-                    height="95%"
-                    className="testImg"
-                    // img-fluid = 'maxWidth: 30%'
-                  />
-                </div>
+                
               </div>
             </div>
           </div>

@@ -56,15 +56,12 @@ function ProductList() {
 
   return (
     <div className="container text-center my-2" id="top">
-      <h2 className="text-center text__primary">
-        Products
-      </h2>
+      <h2 className="text-center text__primary">Products</h2>
       {state.products.length ? (
-        <div className="row">
+        <div className="row justify-content-center"> {/* Center-align products */}
           {currentProducts.map((product) => (
-            <div className="mb-3 col-sm-12 col-md-6 col-lg-4">
+            <div key={product._id} className="col-sm-12 col-md-6 col-lg-4 mb-3">
               <ProductItem
-                key={product._id}
                 _id={product._id}
                 image={product.image}
                 name={product.name}
@@ -78,6 +75,7 @@ function ProductList() {
         <h3>You haven't added any products yet!</h3>
       )}
       <div className="pagination pagination__btn">
+      <div className="pagination pagination__btn">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             className={`page-link ${
@@ -90,7 +88,8 @@ function ProductList() {
           </button>
         ))}
       </div>
-      <a href="#top" className='uil uil-arrow-up scroll__btn'></a>
+      </div>
+      <a href="#top" className="uil uil-arrow-up scroll__btn"></a>
       {loading ? <p>Loading</p> : null}
     </div>
   );

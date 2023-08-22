@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../index.css";
 import Jumbotron from "../components/Jumbotron";
-import FeaturedProducts from "../components/FeaturesProducts";
+import FeaturedProductsList from "../components/FeaturedProductsLIst";
 import Testimonials from "../components/Testimonials";
 import Hero from "../components/Hero";
 const Home = () => {
@@ -13,7 +13,11 @@ const Home = () => {
       {/* <Hero/> */}
       
       <div className="pt-5 row">
-        <FeaturedProducts/>
+        <FeaturedProductsList/>
+    
+        </div>
+        <div className="pt-5 row">
+        
         <Testimonials/>
         </div>
       </div>
