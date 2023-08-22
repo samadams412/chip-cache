@@ -28,3 +28,4 @@ Other future tasks
 - [ ] Add profile page for user to change user settings(change email,password, etc.) 
 - [ ] Add status to Order so that users can track status from processing, preparing, delivery, completed?
 - [ ] Add search bar for user to search products by keywords
+- [ ] Add .env file for sensetive data

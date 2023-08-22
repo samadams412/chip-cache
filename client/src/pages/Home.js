@@ -3,18 +3,21 @@ import "../index.css";
 import Jumbotron from "../components/Jumbotron";
 import FeaturedProducts from "../components/FeaturesProducts";
 import Testimonials from "../components/Testimonials";
-
+import Hero from "../components/Hero";
 const Home = () => {
 
   return (
+    <>
+    <Jumbotron />
     <div className="container">
-      <Jumbotron />
+      {/* <Hero/> */}
+      
       <div className="pt-5 row">
         <FeaturedProducts/>
         <Testimonials/>
         </div>
       </div>
-    
+      </>
   );
 };
 

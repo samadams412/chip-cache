@@ -1,17 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Auth from "../../utils/auth";
-// import './nav.css'
 import { Link } from "react-router-dom";
 import Cart from "../../components/Cart/index";
 import '../../index.css'
 
 function Nav() {
+  const [scroll, setScroll] = useState(false);
+  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
 
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
       
-        <div className="container-fluid nav__container">
+        <div className={`container-fluid nav__container ${scroll ? 'scroll' : ""}`}>
           <a className="navbar-brand" href="/">E-Shop</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -32,7 +47,7 @@ function Nav() {
     } else {
       return (
         
-        <div className="container-fluid nav__container">
+        <div className={`container-fluid nav__container ${scroll ? 'scroll' : ""}`}>
           <a className="navbar-brand" href="/">E-shop</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

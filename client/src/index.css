@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu+Condensed&display=swap');
 
 :root {
   --header-height: 3rem;
@@ -16,7 +16,7 @@
   --color4: #14110F;
   --color5: #284b63;
    /*========== Font and typography ==========*/
-   --body-font: "Russo", sans-serif;
+   --body-font: "Ubuntu Condensed", sans-serif;
      /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -73,6 +73,8 @@ html {
 
 body{
   background-color: #FDFFFC;
+  margin: 0;
+  padding: 0;
 }
 /* body::before {
   content: "E-Shop";
@@ -92,7 +94,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Russo", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
 }
 
 ul {
@@ -107,33 +109,45 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.btn{
+  font-family: "Ubuntu Condensed", sans-serif;
+}
 .text__primary{
   color: #0c5583;
-  font-family: "Russo", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-size: 30px;
   font-weight: 750;
 }
 
 .text__primary-2{
   color: #0c5583;
-  font-family: "Russo", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-size: 20px;
   font-weight: 750;
 }
 /*========== NAVBAR ===========*/
 .nav__container {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
   color: #fff;
   font-weight: bold;
-  border: 1px solid var(--second-color);
-  border-radius: 5px;
-  margin: 3px 5px;
   background-color: #1D70A2;
 }
-
+.nav__container.scroll {
+  background-color: rgba(0, 0, 0, 0.8); /* Change the background color as needed */
+}
+.navbar{
+  font-family: "Ubuntu Condensed", sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .navbar-toggler{
     padding: 0.25rem 0.5rem; 
     font-size: 0.75rem; 
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .navbar-brand{
@@ -155,39 +169,38 @@ img {
 }
 
 /*========== JUMBOTRON ===========*/
-.jumbotron__btn{
+.jumbotron{
   background-color: #1D70A2;
-  color: #FDFFFC;
+  padding-top: 0;
+  margin-top: 0;
+  width: 100%;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 600;
+  padding-left: 3px;
+  
+}
+
+.jumbotron__btn{
+  background-color: #eff2ed;
+  position: relative;
+  color: #14110F;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
   transition: background-color 0.3s, box-shadow 0.3s;
-  position: relative;
   z-index: 1;
 }
 
 .jumbotron__btn:hover {
   background-color: white;
   box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
-  color: #fff;
+  color: #14110F;
   font-size: 25px;
+  transform: scale(1.0);
 }
 
-/* Neon Glow Animation */
-.jumbotron__btn:hover:before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  z-index: -1;
-  background: linear-gradient(45deg, #1D70A2, #FDFFFC, #1D70A2);
-  background-size: 300% 300%;
-  animation: glowing 2s linear infinite;
-  border-radius: 5px;
-}
+
 
 @keyframes glowing {
   0% {
@@ -202,11 +215,6 @@ img {
   transform: scale(1.1);
 }
 
-.jumbotron {
-  border-radius: 5px;
-  color: var(--second-color);
-  font-weight: bold;
-}
 
 .jumbotron__transparent{
   background-color: rgba(255, 255, 255, 0.7);
@@ -218,8 +226,9 @@ img {
 }
 
 .jumbotron__sub-title{
+  font-size: 30px;
   font-weight: 600;
-  color: #1D70A2;
+  color: #14110F;
 }
 
 /*========== CARDS ===========*/
@@ -227,7 +236,9 @@ img {
   font-weight: bold;
 }
 .card-text{
-  color: #1D70A2;
+  color: #14110F;
+  font-family: "Victor Mono", sans-serif;
+  font-weight: 600;
   /* font-weight: bold; */
 }
 .item-card{
@@ -237,6 +248,7 @@ img {
 .category__menu{
   border: 1px solid #1D70A2;
   border-radius: 5px;
+  font-family: "Ubuntu Condensed", sans-serif;
 }
 
 .category__btn{
@@ -331,14 +343,14 @@ img {
 
 /*========== SIGNUP FORM ===========*/
 .signup__label{
-  font-family: "Russo", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   color: #14110F;
   font-weight: 600;
 }
 
 .submit__btn{
   background-color: #1D70A2;
-  color: #14110F;
+  color: #eff2ed;
 }
 
 .btn-disabled{
