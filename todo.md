@@ -16,13 +16,15 @@ Frontend tasks
 
 - [x] determine which pages, components there will be
 - [x] start with large components and break them down smaller later on
-- [ ] Fix styling on login/signup pages
-- [ ] Fix styling on cart component
+- [x] Fix styling on login/signup pages
+- [x] Fix styling on cart component
 - [ ] Sizing of items in Order History page
 - [ ] Add more seed data
-- [ ] Add more to the home page 
+- [ ] Populate the homepage with more data from other components
 
 Other future tasks
 
 - [ ] Add more filter ability other than category(i.e, price, etc.)
 - [ ] Add profile page for user to change user settings(change email,password, etc.) 
+- [ ] Add status to Order so that users can track status from processing, preparing, delivery, completed?
+- [ ] Add search bar for user to search products by keywords
